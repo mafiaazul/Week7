@@ -1,0 +1,38 @@
+start 
+    string name = ""
+    string flavor = ""
+    string icingColor = ""
+    double finalPrice = 0
+
+    Output "Please enter your name: "
+    Input name
+    Output "Please enter flavor: "
+    Input flavor
+    Output "Please enter icing color: "
+    Input icingColor
+
+    Output "Hi, " + name
+    Output "Your cost is: " + calculateFinalPrice(flavor, icingColor)
+stop
+
+-----
+
+double calculateFinalPrice (string flavor, string icingColor) {
+    if (flavor.equals("Vanilla"))
+        finalPrice += 1.75
+    else if (flavor.equals("Chocolate"))
+        finalPrice += 2
+    else if (flavor.equals("Raspberry"))
+        finalPrice += 2.25
+    
+    if (icingColor.equals("Blue"))
+        finalPrice += 0.5
+    else if (icingColor.equals("Red"))
+        finalPrice += 0.25
+    else if (icingColor.equals("White"))
+        finalPrice = finalPrice
+    else 
+        finalPrice += 0.75
+
+    return finalPrice
+}

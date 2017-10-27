@@ -1,0 +1,41 @@
+start
+    declarations
+        int x = 0
+        int y = 0
+        boolean result3 = true 
+
+    Output "Enter 1st positive number or -1 to QUIT"
+    Input x
+
+    boolean result = isNegative(x)
+
+    if (!result)
+        While x != -1 || !result3
+            Output "Enter 2nd positive number"
+            Input y
+
+            boolean result2 = isNegative(y)
+            if (!result2)
+                addTwoNumbers(x, y)
+            else          
+                Output "The 2nd number was negative"
+            endif 
+            
+            Output "Enter 1st positive number or -1 to QUIT"
+            Input x
+            result3 = isNegative(x)
+        endwhile
+    endif
+stop
+
+----
+
+void addTwoNumbers(int x, int y)
+Output "1st Num + 2nd num: " + ( x + y )
+
+
+boolean isNegative(int num)
+if (num < 0)
+    return true
+else 
+    return false
